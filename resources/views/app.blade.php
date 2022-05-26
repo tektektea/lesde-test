@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Laravel with Inertia</title>
-		@vite("public/build/manifest.json")
+		@vite()
         @routes
 	</head>
 	<body class="antialiased">

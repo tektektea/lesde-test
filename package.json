@@ -19,6 +19,7 @@
         "@inertiajs/inertia-vue3": "^0.6.0",
         "@inertiajs/progress": "^0.2.7",
         "@quasar/extras": "^1.13.6",
+        "@vitejs/plugin-legacy": "^1.8.2",
         "quasar": "^2.6.6",
         "tailwindcss": "^3.0.24",
         "vue": "^3.2.33",
