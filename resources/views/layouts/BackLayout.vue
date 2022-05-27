@@ -57,7 +57,7 @@ const onScroll=({position})=>{
 const headerClass=computed(()=>localState.position>5?['bg-white shadow-sm']:['bg-white shadow-sm'])
 
 onMounted(()=>{
-    if (usePage().props?.value?.auth) {
+    if (usePage().props?.value?.user) {
         console.log("user found",user?.value);
     }else {
         Inertia.get(route('access-denied'))

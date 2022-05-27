@@ -1,14 +1,13 @@
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import { importPageComponent } from '@/scripts/vite/import-page-component'
+// import 'tw-elements';
 import '@quasar/extras/roboto-font/roboto-font.css'
 import '@quasar/extras/material-icons/material-icons.css'
-import '@quasar/extras/material-icons-outlined/material-icons-outlined.css'
 
 // Import Quasar css
-import 'quasar/dist/quasar.css'
-import {Dialog, Notify, Quasar} from "quasar";
-import {InertiaProgress} from "@inertiajs/progress";
+import 'quasar/src/css/index.sass'
+import {Dialog, Quasar,Loading,Notify} from "quasar";
 
 createInertiaApp({
 	resolve: (name) => importPageComponent(name, import.meta.glob('../views/pages/**/*.vue')),
@@ -16,16 +15,9 @@ createInertiaApp({
 		createApp({ render: () => h(app, props) })
 			.use(plugin)
             .use(Quasar,{
-                plugins: [Notify,Dialog],
-                config: {
-                    brand: {
-                        primary: '#b8952c',
-                        // ... or all other brand colors
-                    }
-                }
+                plugins: {Notify,Loading,Dialog},
             })
-            .mixin({ methods: {route: window.route } }) // Add this
+            .mixin({ methods: { route: window.route } })
 			.mount(el)
 	},
 })
-InertiaProgress.init();

@@ -20,7 +20,8 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//
+//Route::get('/', [DashboardController::class, 'test']);
 Route::get('/', fn() => Inertia::render('IndexPage'));
 Route::get('/admin', fn() => Inertia::render('Backend/DashboardPage'));
 

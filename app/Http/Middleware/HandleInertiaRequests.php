@@ -39,17 +39,9 @@ class HandleInertiaRequests extends Middleware
                 'php' => PHP_VERSION,
                 'laravel' => \Illuminate\Foundation\Application::VERSION
             ],
-            'auth' => auth()->check(),
-            'message' => $request->session()->get('message'),
             'user' => $request->user(),
             'ziggy' => function () {
                 return (new Ziggy)->toArray();
-            },
-            'flash' => function () use ($request) {
-                return [
-                    'success' => $request->session()->get('success'),
-                    'error' => $request->session()->get('error'),
-                ];
             },
         ]);
     }

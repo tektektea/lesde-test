@@ -11,4 +11,9 @@ class DashboardController extends Controller
     {
         return Inertia::render('Backend/DashboardPage');
     }
+
+    public function test(Request $request)
+    {
+
+    }
 }

@@ -72,12 +72,12 @@ const localState=reactive({
 const submit=e=>{
     form.post(route('login:store'),{
         preserveScroll: true,
-        onStart: () => InertiaProgress.init(),
+        onStart: () => q.loading.show(),
         onSuccess: () => {
             q.notify({type:'positive',message:'Yayy'})
         },
         onError:()=> q.notify({type:'negative',message:'Nay'}),
-        onFinish: () => InertiaProgress.done()
+        onFinish: () => q.loading.hide()
     })
 
 }

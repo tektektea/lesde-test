@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Laravel with Inertia</title>
-		@vite()
+		<title>Ennawm Mizo tan:Mizoram tan</title>
         @routes
+		@vite
 	</head>
-	<body class="antialiased">
+	<body class="antialiased bg-gray-100">
 		@inertia
 	</body>
 </html>
